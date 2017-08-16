@@ -1,0 +1,45 @@
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<!-- typed framework -->
+<script src="3rdparty/typed.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.ai', {
+        strings: ["hi there. my name is nyan!<br>whats up in the sky?", 
+                    "nothing much...? nah, fine", "then DIE."],
+        typeSpeed: 1,
+        startDelay: 500,
+        backDelay: 5000,
+        showCursor: false
+      });
+  });
+</script>
+
+<html>
+    <head>
+        <title>nyan chat!</title>
+        <link rel="stylesheet" type="text/css" href="nyan.css" />
+    </head>
+    <body>
+        <div id="chatbox">
+            <div class="balloon">
+                <p>
+                <div class="ai"></div>
+                </p>
+            </div>
+            <div class="tail"></div>
+            <canvas id="nyan"></canvas>
+        </div>
+
+        <div id="replybox">
+            <div class="replyballoon">
+                <p>
+                    <div contentEditable spellcheck="false">this is my content...</div>
+                </p>
+            </div>
+            <div class="replytail"></div>
+        </div>
+        <script src="chatbot.js"></script>
+    </body>
+</html>

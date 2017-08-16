@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "pixeled";
+    src: url("fonts/pixelmix.ttf");
+}
+
+#chatbox {
+    /* position in center of screen */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    padding: 0;
+    width: 512px;
+    height: auto;
+}
+
+.balloon {
+    position: absolute;
+    left: 25%;
+    width: 360px;
+    bottom: 143px;
+    min-height: 30px;
+
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: "pixeled";
+    color: black;
+
+    background-color: white;
+}   
+
+.balloon:before, .balloon:after, .balloon>:first-child:before, .balloon>:first-child:after {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-color: #000082;
+    border-style: solid;
+    content: '';
+}
+.balloon:before {top:0;left:0;border-width: 3px 0 0 3px}
+.balloon:after {top:0;right:0;border-width: 3px 3px 0 0}
+.balloon>:first-child:before {bottom:0;right:0;border-width: 0 3px 3px 0}
+.balloon>:first-child:after {bottom:0;left:0;border-width: 0 0 3px 3px}
+
+.tail {
+    height: 15px;
+
+    background-image: url("images/balloon.png");
+    background-size: 32px 32px;
+    background-position: left 28% top 0;
+    background-repeat: no-repeat;
+}
+
+#replybox {
+    /* position in center of screen */
+    position: fixed;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    margin: 0;
+    padding: 0;
+    width: 502px;
+    height: auto;
+}
+
+.replyballoon {
+    position: relative;
+    width: 470px;
+    top: 0px;
+    left: 10px;
+    min-height: 30px;
+
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: "pixeled";
+    color: white;
+
+    background-color: #008282;
+}   
+
+.replyballoon:before, .replyballoon:after, .replyballoon>:first-child:before, .replyballoon>:first-child:after {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-color: #000082;
+    border-style: solid;
+    content: '';
+}
+.replyballoon:before {top:0;left:0;border-width: 3px 0 0 3px}
+.replyballoon:after {top:0;right:0;border-width: 3px 3px 0 0}
+.replyballoon>:first-child:before {bottom:0;right:0;border-width: 0 3px 3px 0}
+.replyballoon>:first-child:after {bottom:0;left:0;border-width: 0 0 3px 3px}
+
+.replytail {
+    height: 15px;
+
+    background-image: url("images/replyballoon.png");
+    background-size: 32px 32px;
+    background-position: right 3% top 0;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-image: url("images/background.png");
+}
+
+/* typed.js library */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+textarea {
+    resize: none;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
